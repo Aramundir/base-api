@@ -39,7 +39,7 @@ Crie o virtualenv:
 
 Adicione as variáveis de ambiente para que sejam carregadas sempre que ativar o virtualenv. Para isso, crie o arquivo no caminho abaixo (no exemplo, usamos o vim para criar o arquivo):
 
-    $ vim ~/.virtualenvs/fbi-api/bin/postactivate
+    $ vim ~/.virtualenvs/base-api/bin/postactivate
     
 Adicione as variáveis de ambiente em um arquivo chamado `.env` na raiz do seu projeto. Existe um arquivo `.env.sample` no projeto que é a base pára esse `.env`
   
