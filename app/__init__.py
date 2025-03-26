@@ -10,3 +10,6 @@ class ClassProperty(object):
 
     def __get__(self, instance, owner):
         return self.getter(owner)
+
+
+class_property = ClassProperty

@@ -23,20 +23,20 @@ class Service(object):
         return import_module(cls._domain)
 
 
-class HollydaysService(Service):
+class HolidaysService(Service):
     _domain = 'app.domain'
 
     @classmethod
-    def list_hollydays(cls):
+    def list_holidays(cls):
         current_year = datetime.now().year
-        hollydays = cls.domain.Hollyday.list_all()
-        if len(hollydays) == 0:
+        holidays = cls.domain.Hollyday.list_all()
+        if len(holidays) == 0:
             cls.domain.Hollyday.fill_for_year(current_year)
-            hollydays = cls.domain.Hollyday.list_all()
-        return hollydays
+            holidays = cls.domain.Hollyday.list_all()
+        return holidays
 
     @classmethod
-    def get_hollydays_dates(cls, year):
+    def get_holidays_dates(cls, year):
         url = 'http://www.calendario.com.br/api/api_feriados.php?ano={}&estado=SP&cidade=PIRACICABA&token={}'.format(year, config.HOLLYDAY_TOKEN)
         response = requests.get(url)
         root = etree.fromstring(response.content)
