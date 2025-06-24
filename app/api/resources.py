@@ -244,10 +244,10 @@ class MeResource(ResourceBase):
             return self.return_unexpected_error(ex)
 
 
-class MeHollyday(ResourceBase):
+class MeHoliday(ResourceBase):
     http_methods_allowed = ['GET']
-    entity_key = 'hollyday'
-    resource_key = 'hollyday'
+    entity_key = 'holiday'
+    resource_key = 'holiday'
 
 
 class HealthcheckResource(Resource):

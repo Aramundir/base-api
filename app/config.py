@@ -33,7 +33,7 @@ class Config(object):
         self.PUSHER_SECRET = os.environ['PUSHER_SECRET']
         self.PUSHER_CLUSTER = os.environ['PUSHER_CLUSTER']
 
-        self.HOLLYDAY_TOKEN = os.environ['HOLLYDAY_TOKEN']
+        self.HOLIDAY_TOKEN = os.environ['HOLIDAY_TOKEN']
 
         self.FAKE_APM = True
 

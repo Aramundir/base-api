@@ -6,7 +6,7 @@ class AppRepository(object):
     db = None
 
 
-HOLLYDAY_TYPE = [
+HOLIDAY_TYPE = [
     ('N', 'National'),
     ('S', 'State'),
     ('M', 'Municipal'),
@@ -14,9 +14,9 @@ HOLLYDAY_TYPE = [
 ]
 
 
-class HollydayType(choice.ChoiceType):
+class HolidayType(choice.ChoiceType):
     def __init__(self):
-        super(HollydayType, self).__init__(HOLLYDAY_TYPE)
+        super(HolidayType, self).__init__(HOLIDAY_TYPE)
 
     def __repr__(self):
-        return "HollydayType()"
+        return "HolidayType()"

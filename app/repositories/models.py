@@ -87,9 +87,9 @@ class User(db.Model, AbstractModel):
         return cls.get_with_filter(email=email)
 
 
-class Hollyday(db.Model, AbstractModel):
-    __tablename__ = 'hollydays'
+class Holiday(db.Model, AbstractModel):
+    __tablename__ = 'holidays'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     date = db.Column(db.Date)
-    type = db.Column(database.HollydayType(), nullable=False, default=u'N')
+    type = db.Column(database.HolidayType(), nullable=False, default=u'N')

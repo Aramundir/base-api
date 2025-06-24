@@ -29,15 +29,15 @@ class HolidaysService(Service):
     @classmethod
     def list_holidays(cls):
         current_year = datetime.now().year
-        holidays = cls.domain.Hollyday.list_all()
+        holidays = cls.domain.Holiday.list_all()
         if len(holidays) == 0:
-            cls.domain.Hollyday.fill_for_year(current_year)
-            holidays = cls.domain.Hollyday.list_all()
+            cls.domain.Holiday.fill_for_year(current_year)
+            holidays = cls.domain.Holiday.list_all()
         return holidays
 
     @classmethod
     def get_holidays_dates(cls, year):
-        url = 'http://www.calendario.com.br/api/api_feriados.php?ano={}&estado=SP&cidade=PIRACICABA&token={}'.format(year, config.HOLLYDAY_TOKEN)
+        url = 'http://www.calendario.com.br/api/api_feriados.php?ano={}&estado=SP&cidade=PIRACICABA&token={}'.format(year, config.HOLIDAY_TOKEN)
         response = requests.get(url)
         root = etree.fromstring(response.content)
         events = root.iter('event')

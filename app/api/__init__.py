@@ -16,7 +16,7 @@ def create_api(app):
 
     api.add_resource(resources.LoginResource, '/api/login')
     api.add_resource(resources.MeResource, '/api/me')
-    api.add_resource(resources.MeHollyday, '/api/me/hollydays')
+    api.add_resource(resources.MeHoliday, '/api/me/holidays')
 
     api.add_resource(resources.HealthcheckResource,
                      '/api/healthcheck',
